@@ -1,13 +1,16 @@
 let view = new Vue({
     el:'#app',
     data:{
-        transformValue:''
+        transformValue:'',
+        imgs:['/x','/y','/z']
     },
     template:`
     <div>
         <div class="window">
             <div class="slides" 
-            v-bind:style="{transform:transformValue}"></div>
+            v-bind:style="{transform:transformValue}">
+                <img v-for="url in imgs" v-bind:src="url">
+            </div>
         </div>
         <button v-on:click="go(0)">1</button>
         <button v-on:click="go(1)">2</button>

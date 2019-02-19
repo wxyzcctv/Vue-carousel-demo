@@ -12,3 +12,7 @@
     transition: all 1s;
     z-index: -1;
 }
+img{
+    width:100px;
+    height: 100px;
+}
